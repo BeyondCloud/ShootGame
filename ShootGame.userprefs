@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\PlayerMovement.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Managers\ControllManager.cs" Line="16" Column="26" />
+      <File FileName="Assets\Scripts\Player\PlayerHealth.cs" Line="19" Column="37" />
+      <File FileName="Assets\Scripts\Player\PlayerShooting.cs" Line="84" Column="72" />
+      <File FileName="Assets\Scripts\Managers\ScoreManager.cs" Line="11" Column="2" />
+      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="23" Column="3" />
+      <File FileName="Assets\Scripts\Enemy\EnemyHealth.cs" Line="10" Column="2" />
+      <File FileName="Assets\Scripts\Enemy\EnemyAttack.cs" Line="14" Column="24" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
