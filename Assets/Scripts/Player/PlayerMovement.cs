@@ -2,12 +2,13 @@
 public class PlayerMovement : MonoBehaviour
 {
 	public float speed = 6f;
-	Vector3 movement;
+	Vector3 movement,lookPoint;
 	Animator anim;
 	Rigidbody playerRigidbody;
 	int floorMask;
 	float camRayLength = 100f;
 
+	public CNAbstractController MovementJoystick;
     void Awake()
 	{
 
@@ -18,11 +19,16 @@ public class PlayerMovement : MonoBehaviour
 	}
 	void FixedUpdate()
 	{
-		float h = Input.GetAxisRaw("Horizontal");
-		float v = Input.GetAxisRaw("Vertical");
+	//	float h = Input.GetAxisRaw("Horizontal");
+	//	float v = Input.GetAxisRaw("Vertical");
 
+		var movement = new Vector3(MovementJoystick.GetAxis("Horizontal"),0f,MovementJoystick.GetAxis("Vertical"));
+		float h = movement.x;
+		float v = movement.z;
+		
 		Move(h,v);
-		Turning();
+		if(h != 0 && v != 0)
+		 Turning(h,v);
 		Animating(h, v);
 	}
 
@@ -35,17 +41,26 @@ public class PlayerMovement : MonoBehaviour
 		playerRigidbody.MovePosition (transform.position + movement);
 
 	}
-	void Turning()
+	void Turning(float h , float v)
 	{
+
 		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+
 		RaycastHit floorHit;
 
 		if(Physics.Raycast (camRay,out floorHit,camRayLength,floorMask))
 	    {
 			Vector3 playerToMouse = floorHit.point - transform.position;
+
+
+			lookPoint.Set(h,0,v);
 			playerToMouse.y = 0f;
-			Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
+			Quaternion newRotation = Quaternion.LookRotation(lookPoint);
+			//Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
+
 			playerRigidbody.MoveRotation(newRotation);
+
+
 
 		}
 

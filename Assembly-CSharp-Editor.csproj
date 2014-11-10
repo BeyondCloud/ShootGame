@@ -46,7 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\ForceSync.cs" />
+     <Compile Include="Assets\CNControls\Editor\CNAbstractControllerInspector.cs" />
+     <Compile Include="Assets\CNControls\Editor\CNInputEditorTools.cs" />
+     <Compile Include="Assets\CNControls\Editor\CNJoystickCreatorMenu.cs" />
+     <Compile Include="Assets\CNControls\Editor\CNJoystickInspector.cs" />
+     <Compile Include="Assets\CNControls\Editor\CNThrowableTouchpadCreatorMenu.cs" />
+     <Compile Include="Assets\CNControls\Editor\CNThrowableTouchpadInspector.cs" />
+     <Compile Include="Assets\CNControls\Editor\CNTouchpadCreatorMenu.cs" />
+     <Compile Include="Assets\CNControls\Editor\CNTouchpadInspector.cs" />
      <None Include="Assets\Shaders\Rim Lit Bumped Specular.shader" />
      <None Include="Assets\Fonts\LuckiestGuy\LICENSE.txt" />
  <Reference Include="UnityEngine.UI">

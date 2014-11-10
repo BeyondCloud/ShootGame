@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 
 using System.Collections;
-public class ControllManager : MonoBehaviour 
+public class FireBtn: MonoBehaviour 
 {
 	public GameObject gunBarrelEnd;
 	private PlayerShooting playerShooting;
